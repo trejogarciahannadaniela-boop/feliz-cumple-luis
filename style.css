@@ -1,0 +1,628 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#040814;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* Fondo */
+#stars{
+    position:fixed;
+    inset:0;
+    background:
+    radial-gradient(circle at 20% 20%, rgba(255,255,255,.9) 1px, transparent 2px),
+    radial-gradient(circle at 70% 35%, rgba(255,255,255,.8) 1px, transparent 2px),
+    radial-gradient(circle at 40% 80%, rgba(255,255,255,.7) 1px, transparent 2px),
+    radial-gradient(circle at 85% 70%, rgba(255,255,255,.9) 1px, transparent 2px),
+    linear-gradient(180deg,#02050f,#07142b,#081d3c);
+    background-size:250px 250px,300px 300px,220px 220px,280px 280px,100% 100%;
+    animation: moverEstrellas 40s linear infinite;
+    z-index:-2;
+}
+
+@keyframes moverEstrellas{
+    from{
+        background-position:0 0,0 0,0 0,0 0,0 0;
+    }
+    to{
+        background-position:0 600px,0 450px,0 700px,0 500px,0 0;
+    }
+}
+
+/* Portada */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:35px;
+}
+
+.hero h3{
+    font-size:22px;
+    font-weight:300;
+    opacity:.9;
+}
+
+.hero h1{
+    font-family:'Cormorant Garamond',serif;
+    font-size:70px;
+    margin:20px 0;
+}
+
+.intro{
+    max-width:420px;
+    font-size:18px;
+    line-height:1.8;
+    color:#d6defc;
+}
+
+button{
+    margin-top:45px;
+    padding:18px 38px;
+    border:none;
+    border-radius:40px;
+    font-size:18px;
+    background:#4b6fff;
+    color:white;
+    cursor:pointer;
+    transition:.4s;
+    box-shadow:0 0 25px rgba(75,111,255,.5);
+}
+
+button:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 40px rgba(75,111,255,.8);
+}
+
+/* Historia */
+
+#historia{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:35px;
+}
+
+.contenido{
+    max-width:650px;
+    text-align:center;
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(15px);
+    padding:35px;
+    border-radius:25px;
+    border:1px solid rgba(255,255,255,.15);
+}
+
+.contenido h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:48px;
+    margin-bottom:20px;
+}
+
+.contenido p{
+    font-size:18px;
+    line-height:1.9;
+    color:#e7eaf9;
+}
+.capitulo{
+
+display:inline-block;
+
+padding:8px 18px;
+
+border-radius:30px;
+
+background:rgba(255,255,255,.12);
+
+font-size:14px;
+
+letter-spacing:2px;
+
+text-transform:uppercase;
+
+margin-bottom:20px;
+
+color:#9fc2ff;
+
+}
+
+b{
+
+color:#9fc2ff;
+
+font-size:20px;
+
+}
+#primera-cita{
+
+min-height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+padding:40px;
+
+}
+
+.foto{
+
+width:100%;
+
+max-width:340px;
+
+border-radius:22px;
+
+margin:25px auto;
+
+display:block;
+
+box-shadow:0 20px 45px rgba(0,0,0,.45);
+
+transition:.5s;
+
+}
+
+.foto:hover{
+
+transform:scale(1.03);
+
+}
+/* CAPÍTULO III - NUESTRA PRIMERA AVENTURA */
+
+#aventura{
+    min-height:100vh;
+    padding:60px 25px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:
+    linear-gradient(
+    180deg,
+    rgba(4,8,20,0),
+    rgba(255,170,90,.15)
+    );
+}
+
+
+#aventura .contenido{
+    max-width:700px;
+}
+
+
+#aventura h2{
+
+    font-family:'Cormorant Garamond',serif;
+    font-size:50px;
+    margin-bottom:25px;
+
+}
+
+
+#aventura p{
+
+    font-size:18px;
+    line-height:2;
+    color:#edf1ff;
+    margin:30px 0;
+
+}
+
+
+/* Fotos tipo recuerdo */
+
+#aventura .foto{
+
+    width:100%;
+    max-width:420px;
+    display:block;
+    margin:35px auto;
+
+    border-radius:25px;
+
+    box-shadow:
+    0 20px 50px rgba(0,0,0,.5);
+
+    transform:rotate(-2deg);
+
+    transition:.5s;
+
+}
+
+
+#aventura .foto:nth-of-type(2){
+
+    transform:rotate(2deg);
+
+}
+
+
+#aventura .foto:hover{
+
+    transform:scale(1.03);
+
+}
+
+
+/* Video */
+
+.video{
+
+    width:100%;
+    max-width:500px;
+
+    display:block;
+
+    margin:40px auto;
+
+    border-radius:25px;
+
+    box-shadow:
+    0 20px 50px rgba(0,0,0,.6);
+
+}
+
+
+/* Parte del amanecer */
+
+.amanecer{
+
+    margin-top:50px;
+
+    padding:35px 25px;
+
+    border-radius:30px;
+
+    background:
+    linear-gradient(
+    180deg,
+    rgba(20,35,80,.7),
+    rgba(255,170,90,.25)
+    );
+
+}
+/* CAPÍTULO IV - NUESTRO PRIMER VIAJE */
+
+#viaje{
+
+min-height:100vh;
+
+padding:70px 25px;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+background:
+
+linear-gradient(
+
+180deg,
+
+rgba(255,255,255,0),
+
+rgba(90,130,80,.18)
+
+);
+
+}
+
+
+#viaje .contenido{
+
+max-width:700px;
+
+}
+
+
+.foto-viaje{
+
+width:100%;
+
+max-width:430px;
+
+display:block;
+
+margin:45px auto;
+
+border-radius:28px;
+
+box-shadow:
+
+0 25px 60px rgba(0,0,0,.45);
+
+transition:.6s;
+
+}
+
+
+.foto-viaje:hover{
+
+transform:scale(1.04);
+
+}
+
+
+.frase-final-viaje{
+
+font-size:20px;
+
+font-family:'Cormorant Garamond',serif;
+
+line-height:2;
+
+padding:25px;
+
+}
+/* CAPÍTULO V - NUESTROS RECUERDOS */
+
+#recuerdos{
+
+min-height:100vh;
+
+padding:70px 25px;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+}
+
+
+#recuerdos .contenido{
+
+max-width:900px;
+
+}
+
+
+.galeria{
+
+display:grid;
+
+grid-template-columns:1fr;
+
+gap:45px;
+
+margin-top:50px;
+
+}
+
+
+.recuerdo{
+
+background:white;
+
+padding:15px;
+
+border-radius:5px;
+
+box-shadow:
+
+0 20px 45px rgba(0,0,0,.35);
+
+transform:rotate(-2deg);
+
+transition:.5s;
+
+}
+
+
+.recuerdo:nth-child(even){
+
+transform:rotate(2deg);
+
+}
+
+
+.recuerdo:hover{
+
+transform:scale(1.05) rotate(0deg);
+
+}
+
+
+.recuerdo img{
+
+width:100%;
+
+height:auto;
+
+border-radius:3px;
+
+display:block;
+
+}
+
+
+.recuerdo p{
+
+color:#333;
+
+font-family:'Great Vibes',cursive;
+
+font-size:28px;
+
+text-align:center;
+
+margin:20px 5px;
+
+}
+
+
+.frase-recuerdos{
+
+margin-top:60px;
+
+font-size:22px;
+
+line-height:2;
+
+font-family:'Cormorant Garamond',serif;
+
+}
+/* CAPÍTULO VI - CARTAS */
+
+
+#cartas{
+
+min-height:100vh;
+
+padding:70px 25px;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+}
+
+
+.sobres{
+
+display:flex;
+
+flex-direction:column;
+
+gap:35px;
+
+margin-top:50px;
+
+}
+
+
+.sobre{
+
+background:#fff;
+
+color:#333;
+
+padding:30px 20px;
+
+border-radius:20px;
+
+text-align:center;
+
+cursor:pointer;
+
+box-shadow:
+
+0 20px 45px rgba(0,0,0,.35);
+
+transition:.5s;
+
+}
+
+
+.sobre:hover{
+
+transform:translateY(-10px);
+
+}
+
+
+.tapa{
+
+font-size:55px;
+
+}
+
+
+.sobre h3{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:28px;
+
+}
+
+
+.carta{
+
+max-height:0;
+
+overflow:hidden;
+
+opacity:0;
+
+transition:1s;
+
+line-height:1.8;
+
+font-size:17px;
+
+}
+
+
+.sobre.abierta .carta{
+
+max-height:500px;
+
+opacity:1;
+
+margin-top:25px;
+
+}
+#final{
+
+min-height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+padding:40px;
+
+background:
+
+radial-gradient(circle,
+
+rgba(255,255,255,.15),
+
+transparent 40%);
+
+}
+
+
+#final h1{
+
+font-size:45px;
+
+font-family:'Great Vibes',cursive;
+
+}
+
+
+#final p{
+
+font-size:20px;
+
+line-height:2;
+
+}
